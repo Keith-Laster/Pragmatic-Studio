@@ -7,6 +7,11 @@ class Player
   @health = health
 end
 
+#From 'Blocks'4.3 - I do not understand this one at all
+def <=>(other)
+  other.score <=> score
+end
+
 def strong?
   @health > 100
 end

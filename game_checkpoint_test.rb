@@ -71,7 +71,8 @@ def w00t
 end
 end
 
-class Game 
+
+class Game
   attr_reader :title
   
   def initialize(title)
@@ -84,18 +85,16 @@ class Game
   end
   
   def play
-    "There are #{@players.size} players in Knuckleheads:"
-    puts @players
+    puts "There are #{@players.size} in Knuckleheads:"
     @players.each do |player|
       puts player
     end
     @players.each do |player|
-      player.w00t
-      player.w00t
       player.blam
+      player.w00t
+      player.w00t
       puts player
     end
-      
   end
 end
 
@@ -108,3 +107,13 @@ knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 knuckleheads.play
+
+player4 = Player.new("charles")
+player5 = Player.new("chet")
+player6 = Player.new("chad")
+
+gymbros = Game.new("Gymbros")
+gymbros.add_player(player4)
+gymbros.add_player(player5)
+gymbros.add_player(player6)
+gymbros.play
