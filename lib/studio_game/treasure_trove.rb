@@ -1,3 +1,4 @@
+module StudioGame
 Treasure = Struct.new(:name, :points)
 
 module TreasureTrove
@@ -15,4 +16,6 @@ module TreasureTrove
     TREASURES.sample
     
 end
+end
+
 end

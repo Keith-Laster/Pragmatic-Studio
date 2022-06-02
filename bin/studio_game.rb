@@ -1,7 +1,11 @@
-require_relative 'players'
-require_relative 'game'
-require_relative 'clumsy_player'
-require_relative 'berserk_player'
+#!/usr/bin/env ruby
+
+require_relative '../lib/studio_game/players'
+require_relative '../lib/studio_game/game'
+require_relative '../lib/studio_game/clumsy_player'
+require_relative '../lib/studio_game/berserk_player'
+
+module StudioGame
 
 player1= Player.new("moe")
 player2= Player.new("lary",60)
@@ -9,8 +13,9 @@ player3= Player.new("curly",125)
 klutz = ClumsyPlayer.new("klutz", 105)
 berserker = BerserkPlayer.new("berserker", 50)
 
-knuckleheads = Game.new("Knuckleheads")
-knuckleheads.load_players(ARGV.shift || "players.csv")
+knuckleheads = StudioGame::Game.new("Knuckleheads")
+default_player_file = File.join(File.dirname(__FILE__), 'players.csv')
+knuckleheads.load_players(ARGV.shift || default_player_file)
 knuckleheads.add_player(klutz)
 knuckleheads.add_player(berserker)
 #knuckleheads.add_player(player1)
@@ -36,7 +41,7 @@ end
 knuckleheads.save_high_scores
 
  
-
+end
 
 
 

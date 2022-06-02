@@ -3,6 +3,8 @@ require_relative 'die'
 require_relative 'game_turn'
 require_relative 'treasure_trove'
 
+module StudioGame
+
 class Game
   attr_reader :title
   
@@ -100,4 +102,7 @@ class Game
     end
     
   end
+end
+
+
 end

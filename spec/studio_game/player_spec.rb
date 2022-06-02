@@ -1,7 +1,7 @@
-require_relative 'players'
-require_relative 'treasure_trove'
+require 'studio_game/players'
+require 'studio_game/treasure_trove'
 
-
+module StudioGame
 
 describe Player do
   before do
@@ -124,6 +124,8 @@ describe Player do
       @players.sort.should == [@player3, @player2, @player1]
     end
   end
+
+end
 
 end
 

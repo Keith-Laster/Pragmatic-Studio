@@ -1,6 +1,7 @@
-require_relative 'game'
-require_relative 'die'
+require 'studio_game/game'
+require 'studio_game/die'
 
+module StudioGame
 
 describe Game do
 
@@ -47,4 +48,6 @@ describe Game do
 
     player.points.should_not be_zero
   end
+end
+
 end

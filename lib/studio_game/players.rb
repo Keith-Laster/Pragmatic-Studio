@@ -1,6 +1,8 @@
 require_relative 'treasure_trove'
 require_relative 'playable'
 
+module StudioGame
+
 class Player
   include Playable
   attr_accessor :name
@@ -55,4 +57,6 @@ player.w00t
 puts player.health
 player.blam
 puts player.health
+end
+
 end

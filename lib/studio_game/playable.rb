@@ -1,3 +1,5 @@
+module StudioGame
+
 module Playable
   def blam
     @health -= 10
@@ -12,4 +14,6 @@ module Playable
   def strong?
     @health > 100
   end
+end
+
 end

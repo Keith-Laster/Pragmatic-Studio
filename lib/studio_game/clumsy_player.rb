@@ -1,5 +1,7 @@
 require_relative 'players'
 
+module StudioGame
+
 class ClumsyPlayer < Player
   
   def found_treasure(treasure)
@@ -25,4 +27,6 @@ if __FILE__ == $0
     puts "#{treasure.points} total #{treasure.name} points"
   end
   puts "#{clumsy.points} grand total points"
+end
+
 end
